@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Introducción a JavaScript</h1>
+    </header>
+    <main class="page-container">
+        <div class="content" id="semana4">
+            <h2>Semana 4</h2>
+            <h3>Introducción a JavaScript</h3>
+            <p>JavaScript es un lenguaje de programación que se utiliza principalmente para crear interactividad y dinamismo en las páginas web. Permite manipular elementos HTML y CSS, responder a eventos del usuario y realizar tareas asincrónicas como la carga de datos desde un servidor.</p>
+        
+            <h4>Etiqueta <strong>&lt;script&gt;</strong></h4>
+            <p>Contiene código JavaScript que se ejecuta automáticamente al procesar la etiqueta en el navegador.</p>
+        
+            <h4>Script Externo</h4>
+            <p>Se puede incluir código JavaScript desde un archivo separado usando el atributo <strong>src</strong> de la etiqueta <strong>&lt;script&gt;</strong>. Esto organiza y modulariza el código para facilitar su mantenimiento.</p>
+            <p>&lt;script src="/ruta/al/script.js"&gt;&lt;/script&gt;</p>
+            <ul>
+                <li>Ruta Absoluta: /ruta/al/script.js apunta al archivo desde el directorio raíz.</li>
+                <li>Ruta Relativa: src="script.js" apunta al archivo en el mismo directorio que la página web.</li>
+                <li>Ruta en la Web: src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js" carga un archivo JavaScript desde la web.</li>
+            </ul>
+        
+            <h4>Vincular Múltiples Scripts</h4>
+            <p>Se pueden incluir varios archivos de script:</p>
+            <p>&lt;script src="/js/script1.js"&gt;&lt;/script&gt;</p>
+            <p>&lt;script src="/js/script2.js"&gt;&lt;/script&gt;</p>
+        
+            <h4>¿Dónde incluir nuestro script?</h4>
+            <p>La etiqueta &lt;script&gt; puede colocarse en el &lt;head&gt; o en el &lt;body&gt;, y antes, después o en medio del contenido. La ubicación ideal depende de las características del script y del sitio web para optimizar la carga y ejecución.</p>
+            <p>El punto y coma se puede omitir en algunos casos utilizando saltos de línea. Aunque JavaScript puede interpretar un punto y coma implícito en los saltos de línea, es recomendable especificarlo de manera explícita como una buena práctica.</p>
+            <p>Para hacer un comentario de una sola línea, usa dos barras paralelas <strong>//</strong>. Para comentarios de múltiples líneas, comienza con <strong>/*</strong> y termina con <strong>*/</strong>.</p>
+        
+            <h3>Funciones y Variables</h3>
+            <p>Las funciones son fundamentales para ejecutar acciones similares en diferentes partes del script. Por ejemplo, podemos usar funciones para mostrar un mensaje amigable cuando un visitante se autentica, cierra sesión u realiza otras acciones. En esencia, las funciones permiten organizar nuestro código en "bloques" reutilizables.</p>
+        
+            <h4>Variables</h4>
+            <p>Antes de ECMAScript 6, se usaba <strong>var</strong> para definir variables, pero esta actualización introdujo <strong>let</strong> y <strong>const</strong> para definir variables y constantes, respectivamente.</p>
+        
+            <h4>Ámbito de las Variables</h4>
+            <ul>
+                <li><strong>Variables Locales:</strong> Declaradas dentro de un bloque y accesibles solo dentro de ese bloque (delimitado por llaves {}).</li>
+                <li><strong>Variables Globales:</strong> Declaradas fuera de cualquier bloque, accesibles tanto dentro como fuera de los bloques.</li>
+            </ul>
+            <p>Quieres descubrir más? <a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Variables#%C2%BFqu%C3%A9_es_una_variable" target="_blank">¡Haz clic aquí para obtener toda la información que necesitas!</a></p>
+        
+            <h3>DOM (Document Object Model)</h3>
+            <p>Es una interfaz de programación que representa un documento HTML o XML como una estructura jerárquica de nodos, donde cada nodo corresponde a un elemento, atributo o texto en el documento. Permite a los desarrolladores acceder y manipular el contenido, estructura y estilo de las páginas web de manera dinámica mediante programación.</p>
+        
+            <h4>Árbol de Nodos</h4>
+            <ul>
+                <li><strong>Raíz:</strong> Nodo document.</li>
+                <li><strong>Tipos de Nodo:</strong>
+                    <ul>
+                        <li><strong>Document:</strong> Nodo raíz.</li>
+                        <li><strong>Element:</strong> Representa etiquetas HTML.</li>
+                        <li><strong>Attr:</strong> Representa atributos HTML.</li>
+                        <li><strong>Text:</strong> Contiene texto dentro de una etiqueta.</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h4>Acceso a Nodos</h4>
+            <p><strong>Métodos:</strong></p>
+            <ul>
+                <li>getElementsByTagName()</li>
+                <li>getElementsByName()</li>
+                <li>getElementById()</li>
+                <li>getElementsByClassName()</li>
+            </ul>
+            <p>Propiedades CSS: Usar style para acceder y modificar.</p>
+            <p>Atributos HTML: Acceder usando el nombre del atributo.</p>
+        
+            <h4>Creación y Eliminación de Nodos</h4>
+            <ul>
+                <li><strong>Crear:</strong> document.createElement(), document.createTextNode(), appendChild().</li>
+                <li><strong>Eliminar:</strong> remove().</li>
+            </ul>
+        
+            <h4>Trabajar con Clases</h4>
+            <p>Propiedad classList con métodos:</p>
+            <ul>
+                <li><strong>add</strong>: Añade una clase.</li>
+                <li><strong>remove</strong>: Elimina una clase.</li>
+                <li><strong>toggle</strong>: Alterna la presencia de una clase.</li>
+                <li><strong>contains</strong>: Verifica la existencia de una clase.</li>
+            </ul>
+            <p>Quieres descubrir más? <a href="https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model" target="_blank">¡Haz clic aquí para obtener toda la información que necesitas!</a></p>
+        
+            <h3>JSON (JavaScript Object Notation)</h3>
+            <p>Es un formato de datos basado en texto que sigue la sintaxis de objetos de JavaScript. Aunque es similar a los objetos literales de JavaScript, puede usarse en diferentes entornos de programación. JSON es útil para transmitir datos a través de redes y debe convertirse a objetos de JavaScript para su uso. Los datos JSON se almacenan en archivos de texto con la extensión .json.</p>
+        
+            <h4>Estructura del JSON</h4>
+            <p>Formato: Similar a objetos literales JavaScript.</p>
+            <p><strong>Tipos de datos básicos:</strong></p>
+            <ul>
+                <li>Cadenas</li>
+                <li>Números</li>
+                <li>Arreglos</li>
+                <li>Booleanos</li>
+                <li>Literales de objeto</li>
+            </ul>
+            <p>Función: Permite construir jerarquías de datos.</p>
+        
+            <h4>Conversiones entre objetos y texto</h4>
+            <ul>
+                <li><strong>Objetos a JSON:</strong> Usar JSON.stringify(objeto) para convertir un objeto JavaScript a una cadena JSON.</li>
+                <li><strong>JSON a objetos:</strong> Usar JSON.parse(cadenaJSON) para convertir una cadena JSON a un objeto JavaScript.</li>
+            </ul>
+            <p>Estos métodos están disponibles en los navegadores y son comunes en el desarrollo web.</p>
+        
+            <h3>HTTP</h3>
+            <p>HTTP (Hypertext Transfer Protocol) es un protocolo de comunicación utilizado para la transferencia de datos en la web. Permite la transmisión de información entre un cliente (como un navegador web) y un servidor. HTTP define cómo se envían y reciben los mensajes, incluyendo las solicitudes del cliente y las respuestas del servidor, facilitando el intercambio de recursos como páginas web, imágenes y otros archivos.</p>
+        
+            <h4>Método GET</h4>
+            <ul>
+                <li><strong>Propósito:</strong> Solicitar datos del servidor.</li>
+                <li><strong>Uso:</strong> Obtener información sin modificar el estado del servidor.</li>
+                <li><strong>Datos:</strong> Los datos se envían en la URL como parámetros de consulta (query parameters).</li>
+                <li><strong>Ejemplo:</strong> GET /productos?id=123</li>
+                <li><strong>Características:</strong> La información es visible en la URL y tiene un límite de tamaño.</li>
+            </ul>
+        
+            <h4>Método POST</h4>
+            <ul>
+                <li><strong>Propósito:</strong> Enviar datos al servidor para crear o actualizar recursos.</li>
+                <li><strong>Uso:</strong> Modificar el estado del servidor, como enviar formularios.</li>
+                <li><strong>Datos:</strong> Los datos se envían en el cuerpo de la solicitud, no en la URL.</li>
+                <li><strong>Ejemplo:</strong> POST /crear-producto con datos en el cuerpo de la solicitud.</li>
+                <li><strong>Características:</strong> Los datos no son visibles en la URL y no tienen un límite de tamaño estricto.</li>
+            </ul>
+        
+            <h3>Fetch (Comunicación con el servidor)</h3>
+            <p>Fetch es una función de JavaScript que se utiliza para realizar solicitudes HTTP a un servidor de manera asíncrona. Permite enviar y recibir datos sin necesidad de refrescar la página, facilitando la comunicación entre un cliente (como un navegador) y un servidor. Fetch devuelve una promesa que se resuelve con un objeto "Response", el cual proporciona métodos para acceder al cuerpo de la respuesta en distintos formatos, como texto o JSON.</p>
+        
+            <p>Esto permite realizar tareas como:</p>
+            <ul>
+                <li>Obtener datos de usuario</li>
+                <li>Cargar listados de productos</li>
+                <li>Recibir notificaciones</li>
+            </ul>
+        
+            <p><strong>AJAX</strong> (Asynchronous JavaScript And XML) es un término para estas solicitudes, aunque hoy en día se usa más JSON que XML.</p>
+        
+            <h4>Sintaxis básica:</h4>
+            <p>let promise = fetch(url, [options]);</p>
+            <ul>
+                <li><strong>url:</strong> URL del recurso.</li>
+                <li><strong>options:</strong> Opcionales, como el método HTTP y encabezados.</li>
+            </ul>
+        
+            <h4>Procesos:</h4>
+            <ol>
+                <li><strong>Fase 1:</strong> fetch devuelve una promesa que se resuelve con un objeto "Response" cuando el servidor responde. Se puede verificar el estado HTTP con "status" y "ok".</li>
+                <li><strong>Fase 2:</strong> Analizar el cuerpo de la respuesta usando métodos como "response.text()" para texto o "response.json()" para JSON.</li>
+            </ol>
+        
+            <h4>Uso de await</h4>
+            <p>Await pausa la ejecución hasta que la promesa se resuelve o rechaza, y retorna el valor de la promesa. Solo se usa dentro de funciones async.</p>
+        </div>
+        <a href="index.html" class="back-button">Volver a la Página Principal</a>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+/* Estilo inicial para el contenedor de la página */
+.page-container {
+    transform: scale(0.8); /* Comienza con una escala reducida */
+    filter: blur(10px); /* Aplica un desenfoque inicial */
+    opacity: 0; /* Comienza oculto */
+    transition: transform 1s ease-out, filter 1s ease-out, opacity 1s ease-out; /* Transiciones suaves */
+}
+
+/* Clase para hacer visible el contenedor */
+.page-container.visible {
+    transform: scale(1); /* Restaura la escala a su tamaño original */
+    filter: blur(0); /* Elimina el desenfoque */
+    opacity: 1; /* Hacer visible */
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; /* Define la fuente del texto en la página */
+    margin: 0; /* Elimina el margen predeterminado del navegador */
+    padding: 0; /* Elimina el relleno predeterminado del navegador */
+    background-color: #f4f1e7; /* Beige claro */
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #651b7c; /* Establece el color de fondo del encabezado */
+    color: white; /* Define el color del texto en el encabezado */
+    text-align: center; /* Centra el texto dentro del encabezado */
+    padding: 1em; /* Agrega espacio interno alrededor del contenido del encabezado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra del encabezado */
+}
+
+/* Contenedor principal */
+main {
+    padding: 2em; /* Agrega espacio interno alrededor del contenido principal */
+    text-align: center; /* Centra el texto dentro del contenedor principal */
+}
+
+/* Contenedor de botones */
+.container {
+    display: flex; /* Utiliza Flexbox para alinear los botones */
+    justify-content: space-around; /* Distribuye los botones con espacio igual entre ellos */
+    flex-wrap: wrap; /* Permite que los botones se ajusten en varias líneas si es necesario */
+    gap: 2em; /* Establece el espacio entre los botones */
+}
+
+/* Estilo de botones */
+.button {
+    display: block; /* Hace que el enlace se comporte como un bloque, permitiendo el ancho y alto */
+    width:300px; /* Establece el ancho de los botones */
+    height: 150px; /* Establece la altura de los botones */
+    background-color: #ee6441ce; /* Define el color de fondo de los botones */
+    color: white; /* Define el color del texto en los botones */
+    text-align: center; /* Centra el texto dentro del botón */
+    line-height: 155px; /* Ajusta la altura de la línea para centrar el texto verticalmente */
+    font-size: 2em; /* Establece el tamaño de la fuente del texto en los botones */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    border-radius: 8px; /* Redondea las esquinas del botón */
+    box-shadow: 0 40px 30px rgba(0, 0, 0, 0.2); /* Agrega una sombra sutil al botón */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Define la transición suave para el cambio de color y sombra */
+}
+
+/* Estilo del botón cuando el mouse está sobre él */
+.button:hover {
+    background-color: #1b7a6d91; /* Cambia el color de fondo del botón cuando se pasa el mouse por encima */
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra del botón al pasar el mouse por encima */
+}
+
+/* Contenedor de la imagen de la pagina principal */
+.image-container {
+    margin: 1em auto; /* Agrega margen vertical y centra el contenido horizontalmente */
+    max-width: 250px; /* Establece un ancho máximo para la imagen */
+}
+
+.image-container img {
+    width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen esté centrada */
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
+}
+
+/* Estilo del contenido de las semanas */
+.content {
+    margin: 0em; /* Agrega margen vertical y centra el contenido horizontalmente */
+    max-width: 800px; /* Establece un ancho máximo para el contenido */
+    text-align: left; /* Alinea el texto a la izquierda dentro del contenido */
+}
+
+/* Estilo para el texto en negrita */
+.content strong {
+    color: #000000; /* Color que combina con la paleta, usando el color de fondo de los botones como ejemplo */
+    font-size: 1.2em;
+}
+
+/* Encabezado de cada página de semana */
+.content h2 {
+    color: #4CAF50; /* Color verde para el texto del encabezado */
+    font-size: 2.2em;
+    margin-bottom: 1em;
+}
+
+.content h3 {
+    color: #FF5722; /* Color naranja para los subencabezados */
+    font-size: 1.3em;
+    margin-bottom: 0.75em;
+}
+
+/* Botón de volver a la página principal */
+.back-button {
+    display: inline-block; /* Hace que el enlace se comporte como un bloque en línea */
+    margin-top: 2em; /* Agrega espacio superior al botón */
+    padding: 0.5em 1em; /* Agrega espacio interno alrededor del texto del botón */
+    background-color: #36bead; /* Define el color de fondo del botón */
+    color: white; /* Define el color del texto en el botón */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    border-radius: 4px; /* Redondea las esquinas del botón */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra sutil al botón */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Define la transición suave para el cambio de color y sombra */
+}
+
+/* Estilo del botón de volver cuando el mouse está sobre él */
+.back-button:hover {
+    background-color: #005248; /* Cambia el color de fondo del botón al pasar el mouse por encima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Aumenta la sombra del botón al pasar el mouse por encima */
+}
+
+footer {
+    background-color: #651b7c; /* Color de fondo del footer, igual que el encabezado */
+    color: white; /* Color del texto en el footer */
+    text-align: center; /* Centra el texto en el footer */
+    padding: 0.1em; /* Agrega espacio interno alrededor del contenido del footer */
+    width: 100%; /* Hace que el footer ocupe todo el ancho de la página */
+    bottom: 0; /* Alinea el footer en la parte inferior de la página */
+}
+
+/* Estilo del botón para abrir el cuadro de opinión */
+.opinion-button {
+    display: block; /* Muestra el botón como un bloque, ocupando todo el ancho disponible */
+    width: 20%; /* Establece el ancho del botón en 200 píxeles */
+    margin: 2em auto; /* Añade un margen de 2em arriba y abajo, y centra el botón horizontalmente */
+    padding: 1em 1em; /* Añade relleno interno de 0.5em arriba y abajo, y 1em a los lados */
+    background-color: #651b7c; /* Establece el color de fondo del botón a un tono morado oscuro */
+    color: white; /* Define el color del texto en el botón como blanco */
+    text-decoration: none; /* Elimina el subrayado del texto, en caso de que el botón sea un enlace */
+    border-radius: 4px; /* Redondea las esquinas del botón con un radio de 4 píxeles */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra difusa debajo del botón */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Define una transición suave para el cambio de color y sombra */
+    border: none; /* Elimina el borde predeterminado del botón */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    font-size: 1em; /* Establece el tamaño de la fuente del texto en el botón */
+}
+
+/* Estilo del botón de cerrar */
+.close-opinion {
+    background: none; /* Elimina el fondo del botón, dejándolo transparente */
+    border: none; /* Elimina el borde del botón */
+    font-size: 1.2em; /* Establece el tamaño de la fuente en 1.5 veces el tamaño de la fuente base */
+    color: #333; /* Define el color del texto del botón de cerrar como gris oscuro */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    position: absolute; /* Posiciona el botón de cerrar de manera absoluta dentro del contenedor */
+    top: 10px; /* Establece la distancia del botón desde la parte superior del contenedor en 10 píxeles */
+    right: 10px; /* Establece la distancia del botón desde el borde derecho del contenedor en 10 píxeles */
+}
+
+/* Estilo del cuadro de opinión */
+.opinion-box {
+    position: fixed; /* Fija el cuadro de opinión en una posición relativa a la ventana del navegador */
+    bottom: 10px; /* Establece la distancia del cuadro desde el borde inferior de la ventana en 10 píxeles */
+    left: 50%; /* Posiciona el cuadro al 50% del ancho de la ventana */
+    transform: translateX(-50%); /* Ajusta la posición del cuadro para que esté centrado horizontalmente */
+    background-color: white; /* Define el color de fondo del cuadro como blanco */
+    padding: 1em; /* Añade relleno interno de 1em alrededor del contenido del cuadro */
+    border: 1px solid #ddd; /* Establece un borde de 1 píxel de grosor en color gris claro */
+    border-radius: 8px; /* Redondea las esquinas del cuadro con un radio de 8 píxeles */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Agrega una sombra difusa debajo del cuadro */
+    display: none; /* Inicialmente oculta el cuadro */
+    z-index: 1000; /* Asegura que el cuadro se muestre por encima de otros elementos en la página */
+    width: 300px; /* Establece el ancho del cuadro en 300 píxeles */
+    max-width: 90%; /* Limita el ancho máximo del cuadro al 90% del ancho de la ventana */
+}
+
+/* Estilo de las opciones de satisfacción */
+.rating {
+    display: flex; /* Utiliza Flexbox para alinear las opciones de satisfacción */
+    flex-direction: column; /* Coloca las opciones en una columna */
+}
+
+.rating label {
+    display: flex; /* Utiliza Flexbox para alinear los elementos dentro del label */
+    align-items: center; /* Centra verticalmente los elementos dentro del label */
+    margin-bottom: 0.5em; /* Añade un margen inferior de 0.5em entre las opciones */
+}
+
+.rating span {
+    font-size: 1.5em; /* Establece el tamaño de la fuente de las caritas de satisfacción */
+    margin-right: 0.5em; /* Añade un margen a la derecha de 0.5em entre la carita y el texto */
+}
+
+.submit-opinion {
+    display: block; /* Muestra el botón de enviar como un bloque, ocupando todo el ancho disponible */
+    width: 100%; /* Establece el ancho del botón de enviar al 100% del ancho del cuadro de opinión */
+    padding: 0.5em; /* Añade relleno interno de 0.5em alrededor del texto del botón */
+    background-color: #4CAF50; /* Define el color de fondo del botón como verde */
+    color: white; /* Define el color del texto del botón como blanco */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 4px; /* Redondea las esquinas del botón con un radio de 4 píxeles */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    font-size: 1em; /* Establece el tamaño de la fuente del texto en el botón */
+    margin-top: 1em; /* Añade un margen superior de 1em entre el botón y el contenido anterior */
+}
+
+.submit-opinion:hover {
+    background-color: #45a049; /* Cambia el color de fondo del botón a un verde más oscuro al pasar el cursor por encima */
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CSS(Cascading Style Sheets)</h1>
+    </header>
+    <main class="page-container">
+        <div class="content" id="semana3">
+            <h2>Semana 3</h2>
+            <h3>CSS(Cascading Style Sheets)</h3>
+            <p>Es un lenguaje que permite separar el contenido de una página web (HTML) de su diseño o formato. En las primeras versiones de HTML, el contenido y el diseño estaban mezclados en el código fuente, pero actualmente se pueden manejar por separado usando CSS para definir el estilo.</p>
+        
+            <p><strong>Hay tres maneras de dar estilo a los elementos en una página web:</strong></p>
+            <ol>
+                <li><strong>Style en HTML:</strong> Afecta solo al elemento en el que está incluido.</li>
+                <li><strong>Style en HTML:</strong> Afecta a los elementos seleccionados en toda la página web.</li>
+                <li><strong>Hoja de estilos externa(.css):</strong> Se vincula en el archivo HTML mediante la etiqueta <strong>link</strong> y define el estilo de presentación (color, tamaño, fuente, bordes, márgenes, posición, etc.) para todas las etiquetas.</li>
+            </ol>
+            <p>Utilizar hojas de estilo permite un diseño consistente y fácil de modificar. Si varias páginas web usan la misma hoja de estilo, basta con modificar esta para cambiar la apariencia de todas las páginas que la referencian.</p>
+        
+            <h3>Estilo en cascada</h3>
+            <p>El formato final de un elemento en CSS depende de la combinación de todas las propiedades que lo afectan, lo que se denomina "estilos en cascada". Esto significa que un elemento hereda las propiedades de los elementos que lo contienen. Por ejemplo, el color de texto de un párrafo &lt;p&gt; puede estar determinado por la propiedad establecida para el elemento &lt;body&gt;.</p>
+        
+            <p>Se pueden definir varios selectores simultáneamente escribiéndolos separados por comas, pero no es correcto definir varias propiedades simultáneamente.</p>
+            <p>Una hoja de estilo puede incluir comentarios, los cuales se delimitan con <strong>/* ... */</strong>, similar a los comentarios en el lenguaje de programación C.</p>
+            <p>En las hojas de estilo CSS, los selectores son la parte de las reglas que indican al navegador a qué elementos deben aplicarse las propiedades especificadas en las declaraciones.</p>
+            <p>¿Quieres descubrir más? <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectors" target="_blank">¡Haz clic aquí para obtener toda la información que necesitas!</a></p>
+        
+            <h3>Estilos en cascada</h3>
+            <p>Las hojas de estilo se llaman "en cascada" porque las propiedades de estilo pueden estar escritas en varios lugares y afectar a diferentes elementos. Las propiedades definidas para un elemento contenedor también se aplican a los elementos contenidos. Además, varias reglas pueden aplicarse a un mismo elemento. Si no hay conflictos entre las propiedades, el navegador aplica todas las propiedades. Si hay conflictos, existen reglas para determinar qué propiedad tiene preferencia.</p>
+            <p><strong>Reglas de aplicación de los estilos:</strong></p>
+            <ol>
+                <li>Atributo style > Etiqueta &lt;style&gt; > Hoja de estilo enlazada > Propiedades por defecto del navegador.</li>
+                <li>Etiqueta &lt;style&gt; > Hoja de estilo enlazada > Propiedades por defecto del navegador.</li>
+                <li>Hoja de estilo enlazada > Propiedades por defecto del navegador.</li>
+                <li>Si no se aplica ningún estilo específico, el navegador usa sus propiedades por defecto.</li>
+                <li>En conflicto entre diferentes hojas de estilo, se aplica el valor de la última hoja de estilo enlazada (último &lt;link&gt; en &lt;head&gt;).</li>
+            </ol>
+        
+            <h3>Tamaños y distancias</h3>
+            <p>La propiedad <strong>width</strong> define el ancho de un elemento usando un valor numérico (con unidad) o un porcentaje (respecto al elemento padre). Si no se especifica, el elemento ocupa todo el ancho disponible.</p>
+            <p>La propiedad <strong>height</strong> define la altura de un elemento con un valor numérico (con unidad), pero no en porcentaje. Si no se especifica, el elemento ocupa el espacio necesario para su contenido. Si se establecen tanto <strong>width</strong> como <strong>height</strong>, el contenido puede no caber y se debe usar la propiedad <strong>overflow</strong> para manejar este caso.</p>
+            <p><strong>Tamaño de imágenes:</strong></p>
+            <ul>
+                <li>Las propiedades <strong>width</strong> y <strong>height</strong> también se aplican a imágenes, prevaleciendo sobre los atributos <strong>width</strong> y <strong>height</strong> en la etiqueta <strong>&lt;img&gt;</strong>.</li>
+                <li>Si se indica solo una propiedad (ancho o altura), la imagen mantiene la proporción.</li>
+                <li>Si se indican ambas propiedades, la imagen se ajusta al tamaño especificado.</li>
+            </ul>
+            <p>Quieres descubrir más? <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS" target="_blank">¡Haz clic aquí para obtener toda la información que necesitas!</a></p>
+        
+            <h3>Unidades relativas</h3>
+            <p>Las unidades relativas se dividen en dos tipos: aquellas que se basan en el tamaño del tipo de letra y aquellas que se basan en las dimensiones de la pantalla.</p>
+            <p><strong>Unidades relativas respecto al tipo de letra:</strong></p>
+            <ul>
+                <li><strong>em</strong>: Tamaño de fuente del elemento contenedor (1em = 100%).</li>
+                <li><strong>ex</strong>: Altura de la letra "x" del elemento contenedor.</li>
+                <li><strong>ch</strong>: Altura de la cifra "0" del elemento contenedor.</li>
+                <li><strong>rem</strong>: Tamaño de la fuente del elemento raíz de la página.</li>
+            </ul>
+            <p>Las más utilizadas son em y rem.</p>
+            <p><strong>Unidades relativas respecto a la pantalla:</strong></p>
+            <ul>
+                <li><strong>vw</strong>: el 1% del ancho de la ventana (sin contar bordes, pestañas, barras de desplazamiento, etc.).</li>
+                <li><strong>vh</strong>: el 1% del alto de ventana (sin contar bordes, pestañas, barras de desplazamiento, etc.).</li>
+                <li><strong>vmin</strong>: el menor de los tamaños <strong>vw</strong> y <strong>vh</strong>.</li>
+                <li><strong>vmax</strong>: el mayor de los tamaños <strong>vw</strong> y <strong>vh</strong>.</li>
+            </ul>
+            <p>Quieres descubrir más? <a href="https://www.w3schools.com/cssref/css_units.php" target="_blank">¡Haz clic aquí para obtener toda la información que necesitas!</a></p>
+        </div>
+        <a href="index.html" class="back-button">Volver a la Página Principal</a>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

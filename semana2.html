@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Qué es una página web</h1>
+    </header>
+    <main class="page-container">
+        <div class="content section" id="semana2">
+            <h2>Semana 2</h2>
+            <h3>Qué es una página web</h3>
+            <p><strong>Definición:</strong></p>
+            <ul>
+                <li>Documento de texto que usa etiquetas para:
+                    <ul>
+                        <li>Modificar presentación</li>
+                        <li>Incluir imágenes</li>
+                        <li>Crear enlaces</li>
+                        <li>Dar significado al contenido</li>
+                    </ul>
+                </li>
+                <li>Etiquetas entre signos de menor y mayor (&lt; &gt;)</li>
+                <li>Etiquetas en pares (apertura y cierre), algunas no requieren cierre (marcas vacías: &lt;br&gt;, &lt;img&gt;, &lt;hr&gt;)</li>
+                <li>Navegadores interpretan etiquetas para mostrar el diseño</li>
+                <li>Recomendación: usar hojas de estilo para la apariencia</li>
+                <li>Etiquetas pueden anidarse; los saltos de línea y espacios en blanco son ignorados</li>
+                <li>Etiquetas brindan significado semántico, no solo estilo visual</li>
+            </ul>
+        
+            <h3>Atributos:</h3>
+            <ul>
+                <li>Pueden tener uno o varios atributos en la etiqueta de apertura</li>
+                <li>Ejemplo: &lt;etiqueta atributo="valor" atributo2="valor2"&gt;</li>
+                <li>Valores de atributos entre comillas (no necesario si no hay espacios)</li>
+                <li>Se recomienda usar hojas de estilo para modificar el aspecto visual</li>
+            </ul>
+        
+            <h3>Comentarios:</h3>
+            <ul>
+                <li>No visibles en el navegador, salvo en el código fuente</li>
+                <li>Etiqueta: &lt;!-- .... --&gt;</li>
+                <li>Pueden estar dentro o fuera de las etiquetas</li>
+            </ul>
+        
+            <h3>Página básica:</h3>
+            <ul>
+                <li>&lt;!DOCTYPE ...&gt;: Obligatoria, indica el tipo de documento (HTML5: "html")</li>
+                <li>&lt;html&gt; ...&lt;/html&gt;: Engloba todo el documento</li>
+                <li>Dividido en:
+                    <ul>
+                        <li>&lt;head&gt; ...&lt;/head&gt;: Información de identificación/control, enlaces a hojas de estilo, &lt;title&gt; ...&lt;/title&gt; (obligatoria), &lt;link&gt; (referencia a documentos como CSS), &lt;script&gt; (código JavaScript)</li>
+                        <li>&lt;body&gt; ...&lt;/body&gt;: Contenido visible en la ventana del navegador</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h3>Sintaxis de HTML:</h3>
+            <ul>
+                <li>Define reglas para escribir elementos correctamente</li>
+                <li>Documentos con errores de sintaxis son inválidos, pero navegadores intentan corregir</li>
+                <li>Recomendación: validar y corregir documentos HTML</li>
+                <li>XHTML en HTML5: basada en XML, más estricta que HTML, que es más flexible</li>
+            </ul>
+        
+            <h3>Generalidades:</h3>
+            <ul>
+                <li>&lt; solo para iniciar etiquetas; para mostrar &lt;, usar &amp;lt;</li>
+                <li>Nombres de elementos, atributos y valores en minúsculas (pueden ir en mayúsculas)</li>
+                <li>Nombre del elemento sin espacios después de &lt;</li>
+                <li>Nombre en etiqueta de cierre debe coincidir con apertura</li>
+                <li>Elemento raíz &lt;html&gt;...&lt;/html&gt; (generalmente único, pero puede omitirse)</li>
+                <li>Elementos deben estar completamente contenidos dentro de otros (no cruzados)</li>
+                <li>Elementos no vacíos tienen etiquetas de cierre (algunas circunstancias permiten omitirlas)</li>
+                <li>Elementos vacíos no tienen etiqueta de cierre, pueden acabar en /&gt; (ejemplos: &lt;img&gt;, &lt;br&gt;, &lt;hr&gt;)</li>
+                <li>Atributos solo en la etiqueta de apertura; valores entre comillas (si tienen espacios)</li>
+                <li>Valor del atributo id debe ser único en el documento</li>
+            </ul>
+        
+            <h3>Atributos en HTML</h3>
+            <ul>
+                <li>Cualquier etiqueta HTML puede tener uno o más atributos separados por espacios.</li>
+                <li>El valor se asigna con = (excepto atributos booleanos).</li>
+                <li>Los valores deben ir entre comillas si contienen espacios, pero no es necesario para un solo valor.</li>
+            </ul>
+        
+            <h3>Atributos Comunes:</h3>
+            <ul>
+                <li><strong>class:</strong>
+                    <ul>
+                        <li>Define clases de elementos.</li>
+                        <li>Usado en hojas de estilo y selectores.</li>
+                    </ul>
+                </li>
+                <li><strong>id:</strong>
+                    <ul>
+                        <li>Identifica de manera única un elemento en un documento.</li>
+                        <li>No pueden repetirse en la misma página.</li>
+                        <li>Solo puede tener un valor sin espacios.</li>
+                    </ul>
+                </li>
+                <li><strong>style:</strong>
+                    <ul>
+                        <li>Define propiedades de estilo directamente en el elemento.</li>
+                        <li>Se desaconseja su uso; es preferible usar hojas de estilo externas.</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h3>Clases en HTML</h3>
+            <h4>Asignación de Clases:</h4>
+            <ul>
+                <li>Se usa el atributo class.</li>
+                <li>Nombre de la clase: caracteres ingleses, números, guiones y subrayados (no puede empezar con número o guión).</li>
+            </ul>
+        
+            <h4>Aplicación de Clases:</h4>
+            <ul>
+                <li>Las reglas de estilo se aplican a los elementos con esa clase.</li>
+                <li>Los navegadores distinguen entre mayúsculas y minúsculas; se recomienda usar minúsculas.</li>
+                <li>Un elemento hereda propiedades tanto de la clase como de la etiqueta general.</li>
+            </ul>
+        
+            <h4>Combinación de Clases:</h4>
+            <ul>
+                <li>Se pueden asignar varias clases a un elemento, separadas por espacios.</li>
+                <li>El orden de las clases en el atributo class no importa; el orden de las reglas en la hoja de estilo sí.</li>
+                <li>La última definición en la hoja de estilo prevalece en caso de conflictos.</li>
+            </ul>
+        
+            <h4>Selección de Elementos con Múltiples Clases:</h4>
+            <ul>
+                <li>Se pueden escribir selectores para elementos con varias clases.</li>
+            </ul>
+        
+            <h4>Uso de la Misma Clase en Diferentes Elementos:</h4>
+            <ul>
+                <li>Se puede asignar la misma clase a diferentes elementos.</li>
+                <li>Cada elemento puede tener propiedades distintas o iguales, según la definición de la clase.</li>
+            </ul>
+        
+            <h3>Formularios en HTML</h3>
+            <h4>Etiqueta &lt;form&gt;:</h4>
+            <ul>
+                <li>Delimita un formulario.</li>
+            </ul>
+        
+            <h4>Atributos importantes:</h4>
+            <ul>
+                <li><strong>action:</strong> Nombre del agente que procesa los datos (ej. script PHP).</li>
+                <li><strong>method:</strong> Método para enviar datos. Valores posibles:
+                    <ul>
+                        <li>get: Añade datos a la URL.</li>
+                        <li>post: Envía datos de forma separada.</li>
+                    </ul>
+                </li>
+                <li>Si method no está definido, se usa get por defecto.</li>
+            </ul>
+        
+            <h4>Controles en Formularios:</h4>
+            <ul>
+                <li>Etiquetas principales:
+                    <ul>
+                        <li>&lt;input&gt;, &lt;button&gt;, &lt;select&gt;, &lt;optgroup&gt;, &lt;option&gt;, &lt;textarea&gt;.</li>
+                        <li>Estructura: &lt;fieldset&gt;, &lt;legend&gt;.</li>
+                        <li>Accesibilidad: &lt;label&gt;.</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h4>Atributos de Controles:</h4>
+            <ul>
+                <li><strong>type:</strong> Define el tipo de control (ej. text, password, number).</li>
+                <li><strong>name:</strong> Identifica el control. No se deben repetir (excepto en botones radio).</li>
+                <li><strong>value:</strong> Valor inicial del control. Puede mostrarse al usuario o no (excepciones: archivo, imagen).</li>
+                <li><strong>required:</strong> Indica si un control es obligatorio.</li>
+                <li><strong>placeholder:</strong> Texto que aparece en el control de texto antes de que el usuario escriba.</li>
+                <li><strong>size:</strong> Longitud de los controles de texto.</li>
+                <li><strong>maxlength y minlength:</strong> Longitud máxima y mínima permitida para entradas de texto.</li>
+                <li><strong>disabled:</strong> Desactiva el control.</li>
+            </ul>
+        
+            <h4>Controles Específicos:</h4>
+            <ul>
+                <li><strong>Botones:</strong>
+                    <ul>
+                        <li>&lt;input&gt;: Solo texto, definido por value.</li>
+                        <li>&lt;button&gt;: Permite contenido HTML (ej. imágenes).</li>
+                    </ul>
+                </li>
+                <li><strong>Caja de texto de contraseña:</strong> &lt;input type="password"&gt; (muestra puntos en lugar de texto).</li>
+                <li><strong>Número:</strong> &lt;input type="number"&gt; (con min, max, step para restricciones numéricas).</li>
+                <li><strong>Casilla de verificación:</strong> &lt;input type="checkbox"&gt;.</li>
+                <li><strong>Botón radio:</strong> &lt;input type="radio"&gt; (múltiples botones con el mismo name forman un grupo).</li>
+            </ul>
+        </div>
+        <a href="index.html" class="back-button">Volver a la Página Principal</a>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
